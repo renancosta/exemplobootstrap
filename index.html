@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cadastro Usuário</title>
+		<script>
+			function cadastro(){
+				var senha = document.getElementById("senha").value;
+				var senhaC = document.getElementById("senhaC").value;
+				if(senha==senhaC) {
+					var nome = document.getElementById("nome").value;
+					var email = document.getElementById("email").value;
+					var idade = document.getElementById("idade").value;
+					alert("Usuário: "+nome+"\nEmail:"+email+"\nIdade:"+idade+"\nSenha:"+senha+"\nCadastrado com sucesso");
+				}
+				else{
+					alert("Senhas não conferem");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Cadastro Usuário</h1>
+		<form>
+			<label for="nome">Nome:</label>
+			<input type="text" id="nome" placeholder="Informe o nome">
+			</br>
+			<label for="nome">Email:</label>
+			<input type="text" id="email" placeholder="Informe um email válido">
+			</br>
+			<label for="nome">Idade:</label>
+			<input type="text" id="idade" placeholder="Informe a idade">
+			</br>
+			<label for="nome">Senha:</label>
+			<input type="password" id="senha" placeholder="Informe uma senha">
+			</br>
+			<label for="nome">Senha Confirmação:</label>
+			<input type="password" id="senhaC" placeholder="Confirme a nova senha">
+			</br>
+			<input type="button" value="Cadastrar" onclick="cadastro()">
+		</form>
+	</body>
+</html>
